@@ -75,3 +75,15 @@ th.sort-desc::after{
     border:1px solid #ccc;
 }
 
+\.logo{
+    display:block;
+    margin:20px auto;
+    max-width:150px;
+}
+.logo{
+    display:block;
+    margin:20px auto;
+    max-width:150px;
+}
+
+
