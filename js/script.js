@@ -17,13 +17,14 @@ fetch(sheetURL)
         const age = new Date().getFullYear() - birth.getFullYear();
 
         const row = [
-            cols[0],
-            cols[1],
-            cols[2],
+            cols[0],   // timestamp         
+            cols[2],   // name
             age,
-            cols[3],
-            cols[4],
-            cols[5]
+            cols[3],   // sex
+            cols[4],   // incoming as
+            cols[5],   // previous strand
+            cols[11],  //city
+            cols[1],   //email
         ];
 
         tableData.push(row);
@@ -83,7 +84,7 @@ function sortTable(col){
 }
 
 function exportCSV(){
-    let csv="Name,Sex,Birthdate,Age,City,School,Average\n";
+    let csv="Name,Sex,Birthdate,Age,City,School,Contact Number\n";
     tableData.forEach(r=> csv+=r.join(",")+"\n");
 
     const blob=new Blob([csv]);
